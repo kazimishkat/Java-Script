@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let userInput = prompt("enter guesses number 0-9");
+      let chance = 3;
+      let attempt = 1;
+      let actualNumber = Number.parseInt(Math.random() * 10);
+      let answer = false;
+      while (attempt < chance) {
+        if (userInput == actualNumber) {
+          document.writeln("congratulations");
+          answer = true;
+          break;
+        }
+        attempt++;
+        userInput = prompt("enter guesses number 0-9");
+      }
+      if (!answer) {
+        document.writeln("better luck next time");
+      }
+    </script>
+  </body>
+</html>
