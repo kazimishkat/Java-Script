@@ -12,14 +12,14 @@ event.preventDefault();
     let education = document.querySelectorAll('input[name="education"]:checked');
 
     let output = 
-    'Name: ' + name + '(/n)' 
-    'Email: ' + email + '(/n)' 
-    'Password: ' + password + '(/n)' 
-    'Date of Birth: ' + dob + '(/n)' 
-    'Address: ' + address + '(/n)' 
-    'Round: ' + round + '(/n)' 
-    'Gender: ' + gender + '(/n)' 
-    'Education: ' + education + '(/n)' 
+    'Name: ' + name + '(\n)' 
+    'Email: ' + email + '(\n)' 
+    'Password: ' + password + '(\n)' 
+    'Date of Birth: ' + dob + '(\n)' 
+    'Address: ' + address + '(\n)' 
+    'Round: ' + round + '(\n)' 
+    'Gender: ' + gender + '(\n)' 
+    'Education: ' + education + '(\n)' 
 
 
 
