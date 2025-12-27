@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <label for="">Length</label>
+    <input type="text" name="" id="lenght" oninput="areaparamiter()">
+    <label for="">width</label>
+    <input type="text" name="" id="width" oninput="areaparamiter()"> <br>
+    <label for="">Area</label>
+    <span id="area"></span> <br>
+    <label for="">perimeter</label> 
+    <span id="perimeter"></span>
+    
+
+
+    <script>
+        function areaparamiter(){
+            let length=parseInt(document.getElementById('lenght').value);
+            // let length=document.getElementById('lenght').value;
+            let width=parseInt(document.getElementById('width').value);
+
+            document.getElementById('area').innerHTML= length*width;
+            document.getElementById('perimeter').innerHTML = 2*(length+width);
+
+
+        }
+    </script>
+</body>
+</html>
