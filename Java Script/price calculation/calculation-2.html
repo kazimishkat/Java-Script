@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <label for="">Amount</label>
+    <input type="text" id="amount" oninput="inp()">
+    <label for="">Discount</label>
+    <input type="text" id="discount">
+    <label for="">Discount Amount</label>
+    <input type="text" id="damount">
+    <label for="">Final Payment</label>
+    <input type="text" id="fprice">
+    <script>
+        function inp(){
+
+       
+        let amount = parseInt(document.getElementById('amount').value);
+        let dis1 = 10;
+        let dis2= 15;
+        let dis3= 20;
+        let dis4= 25;
+        let discount1= (amount*10)/100
+        let damount1 = amount - discount
+        
+        if(amount>100 && amount<300){
+            document.writeln(dis1);
+            document.writeln(discount1);
+            document.writeln(damount1);
+
+        }
+        else if(amount>300 && amount<700){
+            document.writeln.
+        }
+       
+        }
+        
+            
+      
+        
+         
+    </script>
+</body>
+</html>
