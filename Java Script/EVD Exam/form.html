@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="myform">
+        <label for="">Name</label>
+        <textarea name="" id="name"></textarea><br>
+        <label for="">Contact</label>
+        <input type="text" id="contact"><br>
+        <label for="">Sex</label>
+        <input type="radio" name="sex" value="Male">Male
+        <input type="radio" name="sex" value="FeMale">FeMale
+
+        <label for="">Courses</label>
+        <input type="checkbox" value="NT" name="education">NT
+        <input type="checkbox" value="IAD" name="education">IAD
+        <input type="checkbox" value="DDD" name="education">DDD <br>
+
+          <label for="">Location</label>
+        <select name="" id="location">
+            <option value="Banani">Banani</option>
+            <option value="Dhanmondi">Dhanmondi</option>
+            <option value="Mirpur">Mirpur</option>
+        </select><br>
+
+        <input type="submit" id="submit">
+    </form>
+    <script>
+        function sendForm(event){
+            event.preventDefault();
+
+            let name= document.getElementById('name').value;
+            let contact= document.getElementById('contact').value;
+            let sex= document.querySelector('input[name="sex"]:checked');
+            let course= document.querySelectorAll('input[name="education"]:checked');
+            let location= document.getElementById('location').value;
+            
+            let coursevalue=[];
+            for(let i=0; i<course.length; i++){
+                coursevalue.push(course[i].value)
+            }
+
+            let output= 'name '+ name + '\n' +
+            'contact '+ contact + '\n' +
+            'sex ' + sex.value + '\n' +
+            'course ' + coursevalue + '\n' +
+            'location' + location + '\n';
+
+            let newWindow= window.open("",'_blank');
+            newWindow.document.writeln("<pre>" + output +"</pre>");
+
+        }
+         let myForm= document.getElementById('myform');
+            myForm.addEventListener('submit',sendForm);
+
+    </script>
+</body>
+</html>
