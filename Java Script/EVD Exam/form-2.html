@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" id="myForm">
+        <label for="">Name</label>
+        <input type="text" id="name"> <br>
+        <label for="">Email</label>
+        <input type="email" id="email"> <br>
+        <label for="">Remarks</label>
+        <textarea name="" id="remarks"></textarea> <br>
+        <label for="">Gender</label>
+        <input type="radio" value="Male" name="gender">Male
+        <input type="radio" value="feMale" name="gender">FeMale
+         <br>
+        <label for="">Courses</label>
+        <input type="checkbox" value="NT" name="course"> NT
+        <input type="checkbox" value="Iad" name="course"> IAD
+        <input type="checkbox" value="DDD" name="course"> DDD
+        <input type="checkbox" value="ESAd" name="course"> ESAD
+        <br>
+        <label for="">Location</label>
+        <select name="" id="location">
+            <option value="Banani">Banani</option>
+            <option value="Dhanmondi">Dhanmondi</option>
+            <option value="Mirpur">Mirpur</option>
+        </select><br>
+        <input type="submit" name="submit">
+    </form>
+
+    <script>
+        function dataSend(event){
+            event.preventDefault()
+
+            let name= document.getElementById('name').value;
+            let email= document.getElementById('email').value;
+            let remarks= document.getElementById('remarks').value;
+            let gender= document.querySelector("input[name='gender']:checked");
+            let course= document.querySelectorAll("input[name='course']:checked");
+            let location= document.getElementById('location').value;
+
+            let coursevalue=[];
+
+            for(let i=0; i<course.length; i++){
+                coursevalue.push(course[i].value)
+            }
+
+            let output= 'name= '+ name + '\n' +
+            'email= ' + email + '\n'+
+            'remarks = '+ remarks + '\n' +
+            'gender= ' + gender.value + '\n' +
+            'course= '+ coursevalue + '\n'+
+            'location= '+location+'\n'
+
+            let newWindow=window.open("","_blank");
+            newWindow.document.writeln('<pre>'+ output + '</pre>')
+        }
+
+        let myForm= document.getElementById('myForm');
+        myForm.addEventListener('submit',dataSend);
+    </script>
+</body>
+</html>
