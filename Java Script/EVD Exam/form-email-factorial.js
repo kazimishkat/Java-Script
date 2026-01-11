@@ -27,23 +27,5 @@ function dataSend(event){
 let myForm=document.getElementById('myForm');
 myForm.addEventListener('submit',dataSend);
 
-// Email validation
 
-// let email= prompt('enter mail');
-// let pattern= /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/ ;
 
-// if(pattern.test(email)){
-//     document.writeln('Email Address Is Correct');
-// }
-// else{
-//     document.writeln('Email Address Is Wrong');
-// }
-
-// factorial
-// let userInput=parseInt(prompt('Enter Number'));
-// let factorial=1;
-
-// for(let i=1;i<=userInput;i++){
-//     factorial= factorial*i;
-// }
-// document.writeln('factorial for '+ userInput + 'is ' + factorial)
