@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" id="myForm">
+        <label for="">name</label>
+        <input type="text" id="name"><br>
+        <label for="">contact</label>
+        <input type="text" id="contact"><br>
+        <label for="">remarks</label>
+        <textarea name="" id="remarks"></textarea><br>
+        <label for="">gender</label>
+        <input type="radio" name="gender" value="male">male
+        <input type="radio" name="gender" value="female">female
+        <br>
+        <label for="">course</label>
+        <input type="checkbox" name="course" value="jee">jee
+        <input type="checkbox" name="course" value="nt">nt
+        <input type="checkbox" name="course" value="gd">gd
+        <br>
+        <label for="">location</label>
+        <select name="" id="location">
+            <option value="Dhanmondi">Dhanmondi</option>
+            <option value="Mirpur">Mirpur</option>
+            <option value="kolabagan">kolabagan</option>
+        </select><br>
+        <input type="submit" value="submit">
+    </form>
+
+    <script>
+        // function dataSend(event){
+        //     event.preventDefault();
+        //     let name=document.getElementById('name').value;
+        //     let contact=document.getElementById('contact').value;
+        //     let remarks=document.getElementById('remarks').value;
+        //     let gender=document.querySelector('input[name="gender"]:checked');
+        //     let course=document.querySelectorAll('input[name="course"]:checked');
+        //     let location=document.getElementById('location').value;
+
+        //     let courseValue=[];
+        //     for(let i=0;i<course.length;i++){
+        //         courseValue.push(course[i].value);
+        //     }
+
+        //     let output= 
+        //     'name= '+ name +'\n' +
+        //     'contact= '+ contact +'\n' +
+        //     'remarks= '+ remarks +'\n' +
+        //     'gender= '+ gender.value +'\n' +
+        //     'course= '+ courseValue +'\n' +
+        //     'location= '+ location +'\n';
+
+        //     let newWindow=window.open('','_blank');
+        //     newWindow.document.writeln('<pre>'+output+'</pre>');
+        // }
+
+        // let myForm=document.getElementById('myForm');
+        // myForm.addEventListener('submit',dataSend);
+
+
+        // emali
+        // let userInput=prompt('enter mail');
+        // let pattern=/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        // if(pattern.test(userInput)){
+        //     document.writeln('correct');
+        // }
+        // else{
+        //     document.writeln('incorrect');
+        // }
+
+
+        // factorial
+        // let factorial= 1;
+        // for(let i=1;i<=5;i++){
+        //     factorial=factorial*i;
+        // }
+        // document.writeln('factorial of  5 is ' + factorial);
+    </script>
+</body>
+</html>
