@@ -9,6 +9,8 @@
     <form id="myForm">
         <label for="">Name</label>
         <input type="text" id="name"><br>
+        <label for="">Email</label>
+        <input type="email" id="email"><br>
          <label for="">Contact</label>
         <input type="text" id="contact"><br>
         <label for="">Remakrs</label>
@@ -35,6 +37,7 @@
         function dataSend(event){
             event.preventDefault();
             let name= document.getElementById('name').value;
+            let email= document.getElementById('email').value;
             let contact= document.getElementById('contact').value;
             let remarks= document.getElementById('remarks').value;
             let sex= document.querySelector('input[name="sex"]:checked');
@@ -48,6 +51,7 @@
 
             let output= 
     'name: '+ name + '\n'+
+    'email: '+ email + '\n'+
     'contact: '+ contact + '\n'+
     'remarks: '+ remarks + '\n'+
     'sex: '+ sex.value + '\n'+
